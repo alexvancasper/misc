@@ -1,7 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
 
-
 def get_html(url):
     r = requests.get(url)
     if r.ok:
@@ -25,13 +24,11 @@ def check_proxy(proxies):
 		proxy_check = 'http://' + proxy
 		try:
 			r = requests.get('http://ya.ru',proxies={'http':proxy_check} )
-			print (r.status_code)
 			if r.status_code == 200:
 				work_proxy.append(proxy)
 		except Exception:
 			continue
 	return work_proxy
-
 
 
 def main():
