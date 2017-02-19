@@ -36,7 +36,7 @@ def save_to_file(proxies,filename):
         filename = datetime.datetime.now().strftime("%Y%m%d")+".txt"
     output = open (filename,'w')
     for proxy in proxies:
-        output.write(proxy)
+        output.write(proxy+"\n")
     print ('Amount:'+str(len(proxies)))
 
 def main():
