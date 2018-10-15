@@ -1,8 +1,12 @@
 Misc
+=====================
+
+### proxy_checker.py
 
 The proxy_checker.py can help to check proxies servers. It's getting them from site: http://www.ip-adress.com/proxy_list/ after that the script is checking each proxy server and then show only working proxy servers.
-
+***
 Example output: 
+```bash
 Requsting url: http://www.ip-adress.com/proxy_list/ 
 Request from the server was recevied 
 Got: 50 proxies 
@@ -12,13 +16,13 @@ Got: 50 proxies
 Checked: 43 proxies are working 
 Writing to file 
 Amount:43 Done
-
+```
 
 ### INN_checker.py
 Пример работы скрипта. 
 ***
 ```bash
-$ ./nalog.py 
+$ ./INN_checker.py
 Enter the captcha: 006152
 [1] Requesting INN: 7743541323	Captha: 006152
 [1]	Total rows: 1
