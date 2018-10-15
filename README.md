@@ -12,3 +12,30 @@ Got: 50 proxies
 Checked: 43 proxies are working 
 Writing to file 
 Amount:43 Done
+
+
+<b>INN_checker.py</b>
+Пример работы скрипта. Сильно помогает бухгалтерам ;)
+$ ./nalog.py 
+Enter the captcha: 006152
+[1] Requesting INN: 7743541323	Captha: 006152
+[1]	Total rows: 1
+[1]	[1] PDF downloaded size: 125995 
+Enter the captcha: 124515
+[2] Requesting INN: 7743928560	Captha: 124515
+400
+{"ERRORS":{"captcha":["Цифры с картинки введены неверно"],"captchaToken":["Необходимо обновить картинку с цифрами"]}}
+Captcha is not correct, need to remember it! INN: 7743928560
+Enter the captcha: 042174
+[2] Requesting INN: 7743928560	Captha: 042174
+400
+{"ERRORS":{"captcha":["Цифры с картинки введены неверно"],"captchaToken":["Необходимо обновить картинку с цифрами"]}}
+Captcha is not correct, need to remember it! INN: 7743928560
+Enter the captcha: 400801
+[2] Requesting INN: 7743928560	Captha: 400801
+[2]	Total rows: 1
+[2]	[1] PDF downloaded size: 104479 
+Enter the captcha: 234630
+[3] Requesting INN: 7751000543	Captha: 234630
+[3]	Total rows: 1
+[3]	[1] PDF downloaded size: 112536 
