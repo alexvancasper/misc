@@ -12,10 +12,16 @@ def get_html(url):
 def get_addr_port(html):
     proxy_list=[]
     soup = BeautifulSoup(html,'lxml')
-    trs = soup.find_all('tr',class_=['odd','even'])
+    table_tag = soup.find("table", class_="htable proxylist")
+    trs = table_tag.find_all('td')
     for tr in trs:
-        value = tr.find('td').text
-        proxy_list.append(value)
+        try:
+            addres = tr.find('a').get_text()
+            if addres:
+                value = tr.get_text()
+            proxy_list.append(value)
+        except Exception as e:
+            continue
     return proxy_list
 
 def check_proxy(proxies):
@@ -41,7 +47,7 @@ def save_to_file(proxies,filename):
 
 def main():
     url='http://www.ip-adress.com/proxy_list/'
-    print ("Requsting url: "+url)
+    print ("Requesting url: "+url)
     html = get_html(url)
     if len(html)>200:
         print ("Request from the server was recevied")
